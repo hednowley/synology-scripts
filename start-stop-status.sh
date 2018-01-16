@@ -2,7 +2,7 @@
 #
 # This function checks if the application is running
 check_status() {
-    s=`ps aux | grep -- "-jar [a]irsonic.war" | tr -s " " | cut --delimiter=" " -f 2`
+    s=`ps aux | grep -- "-[j]ar /volume2/airsonic/airsonic.war" | tr -s " " | cut --delimiter=" " -f 2`
     
     if [ $s ] ; then
         # Can't use return as id can be > 255
@@ -26,7 +26,7 @@ start() {
     echo -n "Starting application: "
     
     # Redirects default and error output to a log file
-    nohup java -Dairsonic.home=./home  -Dserver.port=4040 -jar airsonic.war >/dev/null 2>&1&
+    nohup java -Dairsonic.home=/volume2/airsonic/home  -Dserver.port=4040 -jar /volume2/airsonic/airsonic.war >/dev/null 2>&1&
     
     echo "OK"
 }
