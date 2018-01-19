@@ -43,7 +43,7 @@ stop() {
     
     # Kills the application process
     echo -n "Stopping application: "
-    kill -9 $pid &
+    kill $pid &
     echo "OK"
 }
 
