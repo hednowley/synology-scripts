@@ -26,7 +26,7 @@ start() {
     echo -n "Starting application: "
     
     # Redirects default and error output to a log file
-    nohup java -Dairsonic.home=/volume2/airsonic/home  -Dserver.port=4040 -jar /volume2/airsonic/airsonic.war >/dev/null 2>&1&
+    nohup java -Dairsonic.home=/volume2/airsonic/home  -Dserver.port=4040 -jar /volume2/airsonic/airsonic.war >/volume2/airsonic/log.txt 2>&1&
     
     echo "OK"
 }
