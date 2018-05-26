@@ -1,0 +1,10 @@
+$ vi /var/packages/Tomcat7/target/src/logs/cataline.out
+$ sudo -i
+$ vi  /etc/postgresql/pg_hba.conf
+
+host    airsonic        airsonic        127.0.0.1/32            md5
+host    airsonic        airsonic        127.0.0.1/32            password
+
+$ sudo - postgres
+$ pg_ctl reload
+$ exit
